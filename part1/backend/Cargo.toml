@@ -1,0 +1,16 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "web"
+path = "src/main.rs"
+
+[dependencies]
+#This is the our common library that we will create
+common = {path = "../common"}
+#Rocket a rust web server
+rocket = {version = "0.5.0-rc.1", features = ["json"]}
+#A rust serialization library for interacting between the backend and frontend
+serde = "1.0.133"

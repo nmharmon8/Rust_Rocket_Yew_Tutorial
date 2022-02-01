@@ -1,0 +1,23 @@
+[package]
+name = "ui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+#Our common code library
+common = {path = "../common"}
+#The frontend framework we are going to use
+yew = "0.19.3"
+#Yew's routing framework for handling url on the frontend
+yew-router = "0.16.0"
+#Logging for Debugging
+wasm-logger = "0.2.0"
+log = "0.4.14"
+#A web assembly bindgen
+web-sys = "0.3.56"
+#A rust library that renders markup as HTML
+pulldown-cmark = "0.9.1"
+#Reqwasm will be used to send request to the backend
+reqwasm = "0.4.0"
+#A rust serialization library for interacting data between the backend and frontend
+serde = { version = "1.0.133", features = ["derive"] }
