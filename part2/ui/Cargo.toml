@@ -1,0 +1,15 @@
+[package]
+name = "ui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+common = {path = "../common"}
+yew = "0.19.3"
+yew-router = "0.16.0"
+wasm-logger = "0.2.0"
+web-sys = "0.3.56"
+pulldown-cmark = "0.9.1"
+log = "0.4.14"
+reqwasm = "0.4.0"
+serde = { version = "1.0.133", features = ["derive"] }

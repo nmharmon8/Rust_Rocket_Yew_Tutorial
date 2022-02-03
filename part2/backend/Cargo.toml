@@ -1,0 +1,16 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[[bin]]
+name = "web"
+path = "src/main.rs"
+
+[dependencies]
+
+common = {path = "../common"}
+
+rocket = {version = "0.5.0-rc.1", features = ["json"]}
+serde = "1.0.133"
