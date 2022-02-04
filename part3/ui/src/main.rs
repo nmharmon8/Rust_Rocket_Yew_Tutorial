@@ -1,4 +1,6 @@
+mod components;
 mod pages;
+mod utils;
 
 use pages::home::Home;
 use pages::not_found::NotFound;
@@ -85,7 +87,6 @@ impl App {
                                     { "Home" }
                                 </Link<Route>>
                         </li>
-
                         <li class="nav-item">
                             <a href="https://github.com/nmharmon8/Rust_Rocket_Yew_Tutorial" class="nav-link">
                             {"GitHubCode"}
@@ -97,9 +98,7 @@ impl App {
                             {"Blog"}
                             </a>
                         </li>
-
                     </ul>
-
                 </div>
             </nav>
         }

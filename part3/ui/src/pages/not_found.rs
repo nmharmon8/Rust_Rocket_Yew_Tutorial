@@ -1,19 +1,19 @@
 use yew::prelude::*;
 
-pub struct Home;
+pub struct NotFound;
 
-impl Component for Home {
+impl Component for NotFound {
     type Message = ();
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        Home {}
+        NotFound {}
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
-            <div class="d-flex justify-content-center m-5">
-                <h1>{"Building a Website in Rust"}</h1>
+            <div class="justify-content-center m-5">
+                {"Page Not Found"}
             </div>
         }
     }

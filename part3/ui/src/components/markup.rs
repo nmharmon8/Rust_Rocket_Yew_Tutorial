@@ -43,8 +43,10 @@ impl Component for Markup {
             FetchStateMsg::GetData => {
                 _ctx.link().send_future(async move {
                     match Request::get(uri.as_str()).send().await {
-                        Ok(post) => match post.json().await {
-                            Ok(post) => FetchStateMsg::SetDataFetchState(FetchState::Success(post)),
+                        Ok(makrup) => match makrup.json().await {
+                            Ok(makrup) => {
+                                FetchStateMsg::SetDataFetchState(FetchState::Success(makrup))
+                            }
                             Err(err) => {
                                 FetchStateMsg::SetDataFetchState(FetchState::Failed(FetchError {
                                     err: err.to_string(),
